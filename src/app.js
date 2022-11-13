@@ -2,26 +2,21 @@
 window.onload = function() {
 
 let pronoun = ["the", "our"];
-let adj = ["great", "big"];
+let adj = ["great", "big", "fantastic"];
 let noun = ["jogger", "racoon"];
 let domain = [".com", ".net", ".es", ".eusk", ".lol", ".me"];
 
-
   for (let i = 0; i < pronoun.length; i++) {
-      for (let i1 = 0; i1 < adj.length; i1++) {
-          for (let i2 = 0; i2 < noun.length; i2++) {
-              for (let i3 = 0; i3 < domain.length; i3++) {
+      for (let j = 0; j < adj.length; j++) {
+          for (let n = 0; n < noun.length; n++) {
+              for (let k = 0; k < domain.length; k++) {
                 let div = document.createElement('div');
                 div.innerText = `
-                    ${pronoun[i]}${adj[i1]}${noun[i2]}${domain[i3]}
+                    ${pronoun[i]}${adj[j]}${noun[n]}${domain[k]}
                 `
                 document.body.appendChild(div);
-
-
               }
           }
       }
   }
-
-
 };
